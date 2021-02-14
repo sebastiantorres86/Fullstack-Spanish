@@ -12,7 +12,7 @@ Los socios y afiliados del curso incluyen [HoustonInc](https://www.houston-inc.c
 
 ## Tabla de contenidos
 
-- [Parte 0: Fundamentos de las aplicaciones web](src\content\0\es\part0.md)
+- [Parte 0: Fundamentos de las aplicaciones web](src/content/0/es/part0.md)
 - [Parte 1: Introducción a React]()
 - [Parte 2: Comunicándonos con el servidor]()
 - [Parte 3: Programando un servidor con NodeJS y Express]()
