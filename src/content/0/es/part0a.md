@@ -2,20 +2,33 @@
 
 <details><summary>a Información general</summary>
 
-- [Requisitos previos](#requisitos-previos)
-- [Material del curso](#material-del-curso)
-- [Tomando el curso](#tomando-el-curso)
-- [Calificación](#calificación)
-- [Cómo obtener tus créditos](#cómo-obtener-tus-créditos)
-- [Certificado del curso](#certificado-del-curso)
-- [Ampliación de un curso completado anteriormente](#ampliación-de-un-curso-completado-anteriormente)
-- [Cambios desde el año pasado](#cambios-desde-el-año-pasado)
-- [Envío de ejercicios](#envío-de-ejercicios)
-- [Regístrate para el examen](#regístrate-para-el-examen)
-- [Proyecto full stack](#proyecto-full-stack)
-- [Promesa de entrevista](#promesa-de-entrevista)
-- [Antes de empezar](#antes-de-empezar)
-- [Errores tipográficos en el material](#errores-tipográficos-en-el-material)
+&#9656; [Requisitos previos](#requisitos-previos)
+
+&#9656; [Material del curso](#material-del-curso)
+
+&#9656; [Tomando el curso](#tomando-el-curso)
+
+&#9656; [Calificación](#calificación)
+
+&#9656; [Cómo obtener tus créditos](#cómo-obtener-tus-créditos)
+
+&#9656; [Certificado del curso](#certificado-del-curso)
+
+&#9656; [Ampliación de un curso completado anteriormente](#ampliación-de-un-curso-completado-anteriormente)
+
+&#9656; [Cambios desde el año pasado](#cambios-desde-el-año-pasado)
+
+&#9656; [Envío de ejercicios](#envío-de-ejercicios)
+
+&#9656; [Regístrate para el examen](#regístrate-para-el-examen)
+
+&#9656; [Proyecto full stack](#proyecto-full-stack)
+
+&#9656; [Promesa de entrevista](#promesa-de-entrevista)
+
+&#9656; [Antes de empezar](#antes-de-empezar)
+
+&#9656; [Errores tipográficos en el material](#errores-tipográficos-en-el-material)
 </details>
 
 &#9656; [b Fundamentos de las aplicaciones web]()
