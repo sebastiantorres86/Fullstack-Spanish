@@ -20,8 +20,6 @@
 
 &#9656; [b Fundamentos de las aplicaciones web]()
 
-<br>
-
 # Ⓐ Información general
 
 Este curso es una introducción al desarrollo web moderno con JavaScript. El enfoque principal está en las aplicaciones de una sola página implementadas con React y soportadas con servicios web RESTful y GraphQL implementados con Node.js. Las novedades del curso de este año son las partes de TypeScript y React Native.
@@ -50,7 +48,7 @@ El curso consta de doce partes, la primera de las cuales tiene el número 0 por 
 
 Pasar de la parte _n_ a la parte _n + 1_ no es sensato antes de que se haya alcanzado un conocimiento suficientemente bueno de los temas de la parte _n_. En términos pedagógicos, el curso utiliza [aprendizaje para el dominio](https://es.wikipedia.org/wiki/Aprendizaje_para_el_dominio), y solo se pretende que continúe con la siguiente parte después de hacer lo suficiente de los ejercicios de la parte anterior.
 
-Se espera que haga _al menos_ todos los ejercicios que no están marcados con un asterisco (*). Los ejercicios marcados con un asterisco cuentan para su calificación final, pero omitirlos no le impide realizar los ejercicios obligatorios de la siguiente parte.
+Se espera que haga _al menos_ todos los ejercicios que no están marcados con un asterisco (\*). Los ejercicios marcados con un asterisco cuentan para su calificación final, pero omitirlos no le impide realizar los ejercicios obligatorios de la siguiente parte.
 
 La velocidad para completar el curso es bastante flexible y los ejercicios se pueden enviar hasta las 23:59 [EET](https://en.wikipedia.org/wiki/Eastern_European_Time) del 1 de marzo de 2021.
 
@@ -259,7 +257,8 @@ En la parte inferior de cada parte del material hay un enlace para _proponer cam
 
 <div align="center">
 
-  [Proponer cambios en el material](https://github.com/sebastiantorres86/Fullstack-Spanish/edit/main/src/content/0/es/part0a.md)
+[Proponer cambios en el material](https://github.com/sebastiantorres86/Fullstack-Spanish/edit/main/src/content/0/es/part0a.md)
+
 </div>
 
 <div align="right">
