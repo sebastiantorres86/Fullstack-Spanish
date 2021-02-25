@@ -14,11 +14,16 @@
 
 &#9656; [Ejercicios 1.1.-1.2.](#Ejercicios-1.1.-1.2.)
 
+&#9656; [Ejercicios 1.1.-1.2.](#Ejercicios-1.1.-1.2.)
+
+
 </details>
 
 &#9656; [c Estado del componente, controladores de eventos](./part1c.md)
 
 &#9656; [d Un estado más complejo, depurando aplicaciones React](./part1d.md)
+
+# Ⓑ JavaScript
 
 Durante el curso, tenemos un objetivo y la necesidad de aprender una cantidad suficiente de JavaScript además del desarrollo web.
 
