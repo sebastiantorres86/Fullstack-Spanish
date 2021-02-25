@@ -1,11 +1,24 @@
----
-mainImage: ../../../images/part-1.svg
-part: 1
-letter: b
-lang: es
----
+> Fullstack &#9656; [Parte 1](./part1.md) &#9656; JavaScript
 
-<div class="content">
+&#9656; [a Introducción a React](./part1b.md)
+
+<details><summary>b JavaScript</summary>
+
+&#9656; [Componente](#componente)
+
+&#9656; [JSX](#JSX)
+
+&#9656; [Componentes mútiples](#Componentes-mútiples)
+
+&#9656; [props: pasar datos a componentes](#props-pasar-datos-a-componentes)
+
+&#9656; [Ejercicios 1.1.-1.2.](#Ejercicios-1.1.-1.2.)
+
+</details>
+
+&#9656; [c Estado del componente, controladores de eventos](./part1c.md)
+
+&#9656; [d Un estado más complejo, depurando aplicaciones React](./part1d.md)
 
 Durante el curso, tenemos un objetivo y la necesidad de aprender una cantidad suficiente de JavaScript además del desarrollo web.
 
