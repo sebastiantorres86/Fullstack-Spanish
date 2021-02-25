@@ -733,3 +733,15 @@ Cree un diagrama que describa la situación en la que el usuario accede a la ver
 Cree un diagrama que represente la situación en la que el usuario crea una nueva nota utilizando la versión de una sola página de la aplicación.
 
 Este fue el último ejercicio, y es hora de enviar sus respuestas a GitHub y marcar los ejercicios como hechos en la [solicitud de envío](https://studies.cs.helsinki.fi/stats/courses/fullstackopen).
+
+---
+
+<div align="center">
+
+[Proponer cambios en el material](https://github.com/sebastiantorres86/Fullstack-Spanish/edit/main/src/content/0/es/part0b.md)
+
+</div>
+
+<div align="right">
+  <a href="../../1/es/part1.md">Parte 1<br>Siguiente parte</a>
+</div>
