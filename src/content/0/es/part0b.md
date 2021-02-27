@@ -35,7 +35,7 @@
 
 </details>
 
-<div class="content">
+# Ⓑ Fundamentos de las aplicaciones web
 
 Antes de comenzar a programar, repasaremos algunos principios del desarrollo web al examinar una aplicación de ejemplo en <https://studies.cs.helsinki.fi/exampleapp>.
 
