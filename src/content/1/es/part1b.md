@@ -4,18 +4,21 @@
 
 <details><summary>b JavaScript</summary>
 
-&#9656; [Componente](#componente)
+&#9656; [Variables](#variables
 
-&#9656; [JSX](#JSX)
+&#9656; [Arrays](#arrays)
 
-&#9656; [Componentes mútiples](#Componentes-mútiples)
+&#9656; [Objetos](#objetos)
 
-&#9656; [props: pasar datos a componentes](#props-pasar-datos-a-componentes)
+&#9656; [Funciones](#funciones)
 
-&#9656; [Ejercicios 1.1.-1.2.](#Ejercicios-1.1.-1.2.)
+&#9656; [Ejercicios 1.3.-1.5.](#Ejercicios-1.3.-1.5.)
 
-&#9656; [Ejercicios 1.1.-1.2.](#Ejercicios-1.1.-1.2.)
+&#9656; [Métodos de objeto y "this"](#Métodos-de-objeto-y-"this")
 
+&#9656; [Clases](#clases)
+
+&#9656; [Materiales JavaScript](#materiales-javascript)
 
 </details>
 
@@ -27,15 +30,15 @@
 
 Durante el curso, tenemos un objetivo y la necesidad de aprender una cantidad suficiente de JavaScript además del desarrollo web.
 
-JavaScript ha avanzado rápidamente en los últimos años y en este curso usamos características de las versiones más nuevas. El nombre oficial del estándar JavaScript es [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript). En este momento, la última versión es la lanzada en junio de 2019 con el nombre [ECMAScript® 2019](http://www.ecma-international.org/ecma-262/10.0/index.html), también conocido como ES10.
+JavaScript ha avanzado rápidamente en los últimos años y en este curso usamos características de las versiones más nuevas. El nombre oficial del estándar JavaScript es [ECMAScript](https://es.wikipedia.org/wiki/ECMAScript). En este momento, la última versión es la lanzada en junio de 2019 con el nombre [ECMAScript® 2020](https://262.ecma-international.org/11.0/), también conocido como ES11.
 
-Los navegadores aún no son compatibles con todas las funciones más nuevas de JavaScript. Debido a este hecho, una gran cantidad de código que se ejecuta en los navegadores ha sido <i>transpilado</i> de una versión más nueva de JavaScript a una versión más antigua y compatible.
+Los navegadores aún no son compatibles con todas las funciones más nuevas de JavaScript. Debido a este hecho, una gran cantidad de código que se ejecuta en los navegadores ha sido _transpilado_ de una versión más nueva de JavaScript a una versión más antigua y compatible.
 
-Hoy en día, la forma más popular de realizar la transpilación es mediante [Babel](https://babeljs.io/). La transpilación se configura automáticamente en las aplicaciones React creadas con create-react-app. Veremos más de cerca la configuración de la transpilación en la [parte 7](/es/part7) de este curso.
+Hoy en día, la forma más popular de realizar la transpilación es mediante [Babel](https://babeljs.io/). La transpilación se configura automáticamente en las aplicaciones React creadas con create-react-app. Veremos más de cerca la configuración de la transpilación en la [parte 7](../../7/es/part7.md) de este curso.
 
-[Node.js](https://nodejs.org/en/) es un entorno de ejecución de JavaScript basado en el motor de JavaScript [Chrome V8](https://developers.google.com/v8/) de Google y funciona prácticamente en cualquier lugar. desde servidores hasta teléfonos móviles. Practiquemos escribir algo de JavaScript usando Node. Se espera que la versión de Node.js instalada en su máquina sea al menos la versión <i>10.18.0</i>. Las últimas versiones de Node ya comprenden las últimas versiones de JavaScript, por lo que no es necesario transpilar el código.
+[Node.js](https://nodejs.org/es/) es un entorno de ejecución de JavaScript basado en el motor de JavaScript [Chrome V8](https://developers.google.com/v8/) de Google y funciona prácticamente en cualquier lugar. desde servidores hasta teléfonos móviles. Practiquemos escribir algo de JavaScript usando Node. Se espera que la versión de Node.js instalada en su máquina sea al menos la versión _10.18.0_. Las últimas versiones de Node ya comprenden las últimas versiones de JavaScript, por lo que no es necesario transpilar el código.
 
-El código se escribe en archivos que terminan en <i>.js</i> que se ejecutan emitiendo el comando <em>node nombre_del_archivo.js</em>
+El código se escribe en archivos que terminan en _.js_ que se ejecutan emitiendo el comando *node nombre_del_archivo.js*
 
 También es posible escribir código JavaScript en la consola de Node.js, que se abre escribiendo _node_ en la línea de comandos, así como en la consola de herramientas de desarrollo del navegador. Las revisiones más recientes de Chrome manejan las características más nuevas de JavaScript [bastante bien](http://kangax.github.io/compat-table/es2016plus/) sin transpilar el código. Alternativamente, puede utilizar una herramienta como [JS Bin](https://jsbin.com/?js,console).
 
@@ -43,7 +46,7 @@ JavaScript recuerda, tanto en nombre como en sintaxis, a Java. Pero cuando se tr
 
 En ciertos círculos también ha sido popular intentar "simular" características de Java y patrones de diseño en JavaScript. No recomendamos hacer esto ya que los lenguajes y los ecosistemas respectivos son, en última instancia, muy diferentes.
 
-### Variables
+## Variables
 
 En JavaScript, hay algunas formas de definir las variables:
 
@@ -59,16 +62,16 @@ console.log(x, y) // 1, sometext es impreso
 x = 4 // provoca un error
 ```
 
-[const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) no define realmente una variable sino una <i>constante</i> para la cual el valor ya no se puede cambiar. Por otra parte [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) define una variable normal.
+[const](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/const) no define realmente una variable sino una _constante_ para la cual el valor ya no se puede cambiar. Por otra parte [let](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/let) define una variable normal.
 
 En el ejemplo anterior, también vemos que el tipo de datos asignados a la variable puede cambiar durante la ejecución. Al principio _y_ almacena un número entero y al final un string.
 
-También es posible definir variables en JavaScript usando la palabra clave [var](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var). var fue, durante mucho tiempo, la única forma de definir variables. const y let se agregaron recientemente en la versión ES6. En situaciones específicas, var funciona de una [diferente](https://medium.com/craft-academy/javascript-variables-should-you-use-let-var-or-const-394f7645c88f) [manera](http://www.jstips.co/en/javascript/keyword-var-vs-let/) en comparación con las definiciones de variables en la mayoría de los lenguajes. Durante este curso, el uso de var es desaconsejado y debe seguir usando const y let!
-Puede encontrar más sobre este tema en YouTube, por ejemplo, [var, let y const - Características de JavaScript de ES6](https://youtu.be/sjyJBL5fkp8).
+También es posible definir variables en JavaScript usando la palabra clave [var](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/var). var fue, durante mucho tiempo, la única forma de definir variables. const y let se agregaron recientemente en la versión ES6. En situaciones específicas, var funciona de una [diferente](https://medium.com/craft-academy/javascript-variables-should-you-use-let-var-or-const-394f7645c88f) [manera](http://www.jstips.co/en/javascript/keyword-var-vs-let/) en comparación con las definiciones de variables en la mayoría de los lenguajes. Durante este curso, el uso de var es desaconsejado y debe seguir usando const y let!
+Puede encontrar más sobre este tema en YouTube, por ejemplo, [var, let y const - Qué, por qué y cómo - Funciones de JavaScript de ES6](https://youtu.be/sjyJBL5fkp8) (en inglés).
 
-### Arrays
+## Arrays
 
-Un [array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) (matriz) y un par de ejemplos de su uso:
+Un [array](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array) (matriz) y un par de ejemplos de su uso:
 
 ```js
 const t = [1, -1, 3]
@@ -85,7 +88,7 @@ t.forEach(value => {
 
 En este ejemplo, cabe destacar el hecho de que el contenido de la matriz se puede modificar aunque esté definido como _const_. Como la matriz es un objeto, la variable siempre apunta al mismo objeto. Sin embargo, el contenido de la matriz cambia a medida que se le agregan nuevos elementos.
 
-Una forma de iterar a través de los elementos de la matriz es usar _forEach_ como se ve en el ejemplo. _forEach_ recibe una <i>función</i> definida usando la sintaxis de flecha como parámetro.
+Una forma de iterar a través de los elementos de la matriz es usar _forEach_ como se ve en el ejemplo. _forEach_ recibe una _función_ definida usando la sintaxis de flecha como parámetro.
 
 ```js
 value => {
@@ -93,9 +96,9 @@ value => {
 }
 ```
 
-forEach llama a la función <i>para cada uno de los elementos de la matriz</i>, siempre pasando el elemento individual como parámetro. La función como parámetro de forEach también puede recibir [otros parámetros](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach).
+forEach llama a la función _para cada uno de los elementos de la matriz_, siempre pasando el elemento individual como parámetro. La función como parámetro de forEach también puede recibir [otros parámetros](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach).
 
-En el ejemplo anterior, se agregó un nuevo elemento a la matriz usando el método [push](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push). Cuando se usa React, a menudo se usan técnicas de programación funcional. Una característica del paradigma de programación funcional es el uso de estructuras de datos [inmutables](https://en.wikipedia.org/wiki/Immutable_object). En el código de React, es preferible usar el método [concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat), que no agrega el elemento a la matriz, pero crea una nueva matriz en la que se incluyen el contenido de la matriz anterior y el nuevo elemento.
+En el ejemplo anterior, se agregó un nuevo elemento a la matriz usando el método [push](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/push). Cuando se usa React, a menudo se usan técnicas de programación funcional. Una característica del paradigma de programación funcional es el uso de estructuras de datos [inmutables](https://es.wikipedia.org/wiki/Objeto_inmutable). En el código de React, es preferible usar el método [concat](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/concat), que no agrega el elemento a la matriz, pero crea una nueva matriz en la que se incluyen el contenido de la matriz anterior y el nuevo elemento.
 
 ```js
 const t = [1, -1, 3]
@@ -108,7 +111,7 @@ console.log(t2) // [1, -1, 3, 5] es impreso
 
 La llamada al método _t.concat(5)_ no agrega un nuevo elemento a la matriz anterior, pero devuelve una nueva matriz que, además de contener los elementos de la matriz anterior, también contiene el elemento nuevo.
 
-Hay muchos métodos útiles definidos para matrices. Veamos un breve ejemplo del uso del método [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
+Hay muchos métodos útiles definidos para matrices. Veamos un breve ejemplo del uso del método [map](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map).
 
 ```js
 const t = [1, 2, 3]
@@ -117,7 +120,7 @@ const m1 = t.map(value => value * 2)
 console.log(m1) // [2, 4, 6] es impreso
 ```
 
-Basado en la matriz anterior, map crea una <i>nueva matriz</i>, para la cual la función dada como parámetro se usa para crear los elementos. En el caso de este ejemplo, el valor original se multiplica por dos.
+Basado en la matriz anterior, map crea una _nueva matriz_, para la cual la función dada como parámetro se usa para crear los elementos. En el caso de este ejemplo, el valor original se multiplica por dos.
 
 Map también puede transformar la matriz en algo completamente diferente:
 
@@ -127,9 +130,9 @@ console.log(m2)
 // [ '<li>1</li>', '<li>2</li>', '<li>3</li>' ] es impreso
 ```
 
-Aquí una matriz llena de valores enteros se transforma en una matriz que contiene cadenas de HTML utilizando el método map. En la [parte 2](/es/part2) de este curso, veremos que map se usa con bastante frecuencia en React.
+Aquí una matriz llena de valores enteros se transforma en una matriz que contiene cadenas de HTML utilizando el método map. En la [parte 2](../../2/es/part2.md) de este curso, veremos que map se usa con bastante frecuencia en React.
 
-Los elementos individuales de una matriz son fáciles de asignar a variables con la ayuda de la [asignación de desestructuración](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+Los elementos individuales de una matriz son fáciles de asignar a variables con la ayuda de la [asignación de desestructuración](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Destructuring_assignment).
 
 ```js
 const t = [1, 2, 3, 4, 5]
@@ -142,9 +145,9 @@ console.log(rest)          // [3, 4 ,5] es impreso
 
 Gracias a la asignación, las variables _first_ y _second_ recibirán los dos primeros enteros del array como sus valores. Los enteros restantes se "recopilan" en una matriz propia que luego se asigna a la variable _rest_.
 
-### Objetos
+## Objetos
 
-Hay algunas formas diferentes de definir objetos en JavaScript. Un método muy común es usar [objetos literales](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Object_literals), que sucede al enumerar sus propiedades entre llaves:
+Hay algunas formas diferentes de definir objetos en JavaScript. Un método muy común es usar [objetos literales](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_types#objetos_literales), que sucede al enumerar sus propiedades entre llaves:
 
 ```js
 const object1 = {
@@ -186,13 +189,13 @@ object1.address = 'Helsinki'
 object1['secret number'] = 12341
 ```
 
-La última de las adiciones debe hacerse usando corchetes, porque cuando se usa la notación de puntos, <i>secret number</i> no es un nombre de propiedad válido debido al carácter de espacio.
+La última de las adiciones debe hacerse usando corchetes, porque cuando se usa la notación de puntos, _secret number_ no es un nombre de propiedad válido debido al carácter de espacio.
 
 Naturalmente, los objetos en JavaScript también pueden tener métodos. Sin embargo, durante este curso no es necesario definir ningún objeto con métodos propios. Es por eso que solo se discuten brevemente durante el curso.
 
-Los objetos también se pueden definir usando las llamadas funciones de constructor, lo que da como resultado un mecanismo que recuerda a muchos otros lenguajes de programación, por ejemplo, las clases de Java. A pesar de esta similitud, JavaScript no tiene clases en el mismo sentido que los lenguajes de programación orientados a objetos. Sin embargo, ha habido una adición de la <i>sintaxis de clase</i> a partir de la versión ES6, que en algunos casos ayuda a estructurar clases orientadas a objetos.
+Los objetos también se pueden definir usando las llamadas funciones de constructor, lo que da como resultado un mecanismo que recuerda a muchos otros lenguajes de programación, por ejemplo, las clases de Java. A pesar de esta similitud, JavaScript no tiene clases en el mismo sentido que los lenguajes de programación orientados a objetos. Sin embargo, ha habido una adición de la _sintaxis de clase_ a partir de la versión ES6, que en algunos casos ayuda a estructurar clases orientadas a objetos.
 
-### Funciones
+## Funciones
 
 Ya nos hemos familiarizado con la definición de funciones de flecha. El proceso completo, sin atajar esquinas, para definir una función de flecha es el siguiente:
 
@@ -236,7 +239,7 @@ const tSquared = t.map(p => p * p)
 
 La característica de la función de flecha se agregó a JavaScript hace solo un par de años, con la versión [ES6](http://es6-features.org/). Antes de esto, la única forma de definir funciones era usando la palabra clave _function_.
 
-Hay dos formas de hacer referencia a la función; uno está dando un nombre en una [declaración de función](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function).
+Hay dos formas de hacer referencia a la función; uno está dando un nombre en una [declaración de función](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/function).
 
 ```js
 function product(a, b) {
@@ -247,7 +250,7 @@ const result = product(2, 6)
 // el resultado es ahora 12
 ```
 
-La otra forma de definir la función es usando una [expresión de función](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function). En este caso, no es necesario darle un nombre a la función y la definición puede residir entre el resto del código:
+La otra forma de definir la función es usando una [expresión de función](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/function). En este caso, no es necesario darle un nombre a la función y la definición puede residir entre el resto del código:
 
 ```js
 const average = function(a, b) {
@@ -260,14 +263,11 @@ const result = average(2, 5)
 
 Durante este curso definiremos todas las funciones usando la sintaxis de flecha.
 
-</div>
+## Ejercicios 1.3.-1.5.
 
-<div class="tasks">
-<h3>Ejercicios 1.3.-1.5.</h3>
+_Seguimos construyendo la aplicación en la que empezamos a trabajar en los ejercicios anteriores. Puede escribir el código en el mismo proyecto, ya que solo estamos interesados ​​en el estado final de la aplicación enviada._
 
-<i>Seguimos construyendo la aplicación en la que empezamos a trabajar en los ejercicios anteriores. Puede escribir el código en el mismo proyecto, ya que solo estamos interesados ​​en el estado final de la aplicación enviada.</i>
-
-**Pro-tip:** puede tener problemas cuando se trata de la estructura de los <i>props</i> que reciben los componentes. Una buena manera de aclarar las cosas es imprimiendo los props en la consola, por ejemplo, de la siguiente manera:
+**Pro-tip:** puede tener problemas cuando se trata de la estructura de los _props_ que reciben los componentes. Una buena manera de aclarar las cosas es imprimiendo los props en la consola, por ejemplo, de la siguiente manera:
 
 ```js
 const Header = (props) => {
@@ -276,9 +276,9 @@ const Header = (props) => {
 }
 ```
 
-<h4>1.3: información del curso, paso 3</h4>
+### 1.3: información del curso, paso 3
 
-Avancemos para usar objetos en nuestra aplicación. Modifique las definiciones de las variables del componente <i>App</i> de la siguiente manera y también refactorice la aplicación para que siga funcionando:
+Avancemos para usar objetos en nuestra aplicación. Modifique las definiciones de las variables del componente _App_ de la siguiente manera y también refactorice la aplicación para que siga funcionando:
 
 ```js
 const App = () => {
@@ -304,9 +304,9 @@ const App = () => {
 }
 ```
 
-<h4>1.4: información del curso paso 4</h4>
+### 1.4: información del curso paso 4
 
-Y luego coloque los objetos en una matriz. Modifique las definiciones de variables de <i>App</i> de la siguiente forma y modifique las otras partes de la aplicación en consecuencia:
+Y luego coloque los objetos en una matriz. Modifique las definiciones de variables de _App_ de la siguiente forma y modifique las otras partes de la aplicación en consecuencia:
 
 ```js
 const App = () => {
@@ -334,9 +334,9 @@ const App = () => {
 }
 ```
 
-**NB:** en este punto <i>puede asumir que siempre hay tres elementos</i>, por lo que no es necesario pasar por las matrices usando bucles. Volveremos al tema de la representación de componentes basados ​​en elementos dentro de matrices con una exploración más profunda en la [siguiente parte del curso](../part2).
+**NB:** en este punto _puede asumir que siempre hay tres elementos_, por lo que no es necesario pasar por las matrices usando bucles. Volveremos al tema de la representación de componentes basados ​​en elementos dentro de matrices con una exploración más profunda en la [siguiente parte del curso](../../2/es/part2.md).
 
-Sin embargo, no pase diferentes objetos como props separados del componente <i>App</i> a los componentes <i>Content</i> y <i>Total</i>. En su lugar, páselos directamente como una matriz:
+Sin embargo, no pase diferentes objetos como props separados del componente _App_ a los componentes _Content_ y _Total_. En su lugar, páselos directamente como una matriz:
 
 ```js
 const App = () => {
@@ -352,7 +352,7 @@ const App = () => {
 }
 ```
 
-<h4>1.5: información del curso paso 5</h4>
+### 1.5: información del curso paso 5
 
 Llevemos los cambios un paso más allá. Cambie el curso y sus partes en un solo objeto JavaScript. Arregle todo lo que se rompa.
 
@@ -384,19 +384,11 @@ const App = () => {
 }
 ```
 
-</div>
-
-<div class="content">
-
-</div>
-
-<div class ="content">
-
-### Métodos de objeto y "this"
+## Métodos de objeto y "this"
 
 Debido al hecho de que durante este curso estamos usando una versión de React que contiene React Hooks no tenemos necesidad de definir objetos con métodos. **El contenido de este capítulo no es relevante para el curso** pero ciertamente es bueno conocerlo en muchos sentidos. En particular, cuando se utilizan versiones anteriores de React, se deben comprender los temas de este capítulo.
 
-Las funciones de flecha y las funciones definidas usando la palabra clave _function_ varían sustancialmente cuando se trata de cómo se comportan con respecto a la palabra clave [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this), que se refiere al objeto en sí.
+Las funciones de flecha y las funciones definidas usando la palabra clave _function_ varían sustancialmente cuando se trata de cómo se comportan con respecto a la palabra clave [this](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/this), que se refiere al objeto en sí.
 
 Podemos asignar métodos a un objeto definiendo propiedades que son funciones:
 
@@ -461,7 +453,7 @@ const referenceToAddition = arto.doAddition
 referenceToAddition(10, 15)   // 25 es impreso
 ```
 
-Ahora el objeto tiene el método _doAddition_ que calcula la suma de números que se le da como parámetros. El método se llama de la forma habitual, utilizando el objeto <em>arto.doAddition(1, 4)</em> o almacenando una <i>referencia de método</i> en una variable y llamando al método a través de la variable: <em>referenceToAddition(10, 15)</em>.
+Ahora el objeto tiene el método _doAddition_ que calcula la suma de números que se le da como parámetros. El método se llama de la forma habitual, utilizando el objeto _arto.doAddition(1, 4)_ o almacenando una _referencia de método_ en una variable y llamando al método a través de la variable: _referenceToAddition(10, 15)_.
 
 Si intentamos hacer lo mismo con el método _greet_ nos encontramos con un problema:
 
@@ -472,11 +464,11 @@ const referenceToGreet = arto.greet
 referenceToGreet() // imprime "hello, my name is undefined"
 ```
 
-Al llamar al método a través de una referencia, el método pierde el conocimiento de cuál era el _this_ original. A diferencia de otros lenguajes, en JavaScript el valor de [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) se define en función de <i>cómo el método se llama</i>. Cuando se llama al método a través de una referencia, el valor de _this_ se convierte en el llamado [objeto global](https://developer.mozilla.org/en-US/docs/Glossary/Global_object) y el resultado final a menudo no es lo que el desarrollador de software había previsto originalmente.
+Al llamar al método a través de una referencia, el método pierde el conocimiento de cuál era el _this_ original. A diferencia de otros lenguajes, en JavaScript el valor de [this](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/this) se define en función de _cómo el método se llama_. Cuando se llama al método a través de una referencia, el valor de _this_ se convierte en el llamado [objeto global](https://developer.mozilla.org/en-US/docs/Glossary/Global_object) y el resultado final a menudo no es lo que el desarrollador de software había previsto originalmente.
 
 Perder la pista de _this_ al escribir código JavaScript genera algunos problemas potenciales. A menudo surgen situaciones en las que React o Node (o más específicamente el motor JavaScript del navegador web) necesita llamar a algún método en un objeto que el desarrollador ha definido. Sin embargo, en este curso evitamos estos problemas mediante el uso de JavaScript "this-less".
 
-Una situación que lleva a la "desaparición" de _this_ surge cuando establecemos un tiempo de espera para llamar a la función _greet_ en el objeto _arto_, usando la función [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout).
+Una situación que lleva a la "desaparición" de _this_ surge cuando establecemos un tiempo de espera para llamar a la función _greet_ en el objeto _arto_, usando el método [setTimeout](https://developer.mozilla.org/es/docs/Web/API/WindowTimers/setTimeout).
 
 ```js
 const arto = {
@@ -489,25 +481,25 @@ const arto = {
 setTimeout(arto.greet, 1000)  // highlight-line
 ```
 
-Como se mencionó, el valor de _this_ en JavaScript se define en función de cómo se llama al método. Cuando <em>setTimeout</em> llama al método, es el motor JavaScript el que realmente llama al método y, en ese punto, _this_ se refiere al objeto global.
+Como se mencionó, el valor de _this_ en JavaScript se define en función de cómo se llama al método. Cuando _setTimeout_ llama al método, es el motor JavaScript el que realmente llama al método y, en ese punto, _this_ se refiere al objeto global.
 
-Existen varios mecanismos mediante los cuales se puede conservar el _this_ original. Uno de ellos es usar un método llamado [bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind): 
+Existen varios mecanismos mediante los cuales se puede conservar el _this_ original. Uno de ellos es usar un método llamado [bind](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Function/bind):
 
 ```js
 setTimeout(arto.greet.bind(arto), 1000)
 ```
 
-Al llamar a <em>arto.greet.bind(arto)</em> se crea una nueva función donde _this_ está obligado a apuntar a Arto, independientemente de dónde y cómo se llame al método.
+Al llamar a _arto.greet.bind(arto)_ se crea una nueva función donde _this_ está obligado a apuntar a Arto, independientemente de dónde y cómo se llame al método.
 
-Usando [funciones de flecha](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) es posible resolver algunos de los problemas relacionados con _this_. Sin embargo, no deben usarse como métodos para objetos porque entonces _esto_ no funciona en absoluto. Más adelante volveremos al comportamiento de _this_ en relación con las funciones de flecha.
+Usando [funciones de flecha](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions) es posible resolver algunos de los problemas relacionados con _this_. Sin embargo, no deben usarse como métodos para objetos porque entonces _this_ no funciona en absoluto. Más adelante volveremos al comportamiento de _this_ en relación con las funciones de flecha.
 
 Si desea obtener una mejor comprensión de cómo _this_ funciona en JavaScript, Internet está lleno de material sobre el tema, por ejemplo, la serie de screencasts [Comprender la palabra clave this de JavaScript en profundidad](https://egghead.io/courses/understand-javascript-s-this-keyword-in-depth) de [egghead.io](https://egghead.io) es muy recomendable.
 
-### Clases
+## Clases
 
-Como se mencionó anteriormente, no existe un mecanismo de clase como los de los lenguajes de programación orientados a objetos. Sin embargo, hay características en JavaScript que hacen posible "simular" [clases](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) orientadas a objetos.
+Como se mencionó anteriormente, no existe un mecanismo de clase como los de los lenguajes de programación orientados a objetos. Sin embargo, hay características en JavaScript que hacen posible "simular" [clases](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Classes) orientadas a objetos.
 
-Echemos un vistazo rápido a la <i>sintaxis de clase</i> que se introdujo en JavaScript con ES6, que simplifica sustancialmente la definición de clases (o cosas similares a clases) en JavaScript.
+Echemos un vistazo rápido a la _sintaxis de clase_ que se introdujo en JavaScript con ES6, que simplifica sustancialmente la definición de clases (o cosas similares a clases) en JavaScript.
 
 En el siguiente ejemplo definimos una "clase" llamada Person y dos objetos Person:
 
@@ -529,17 +521,17 @@ const janja = new Person('Janja Garnbret', 22)
 janja.greet()
 ```
 
-Cuando se trata de sintaxis, las clases y los objetos creados a partir de ellos recuerdan mucho a las clases y objetos de Java. Su comportamiento también es bastante similar al de los objetos Java. En el núcleo, siguen siendo objetos basados ​​en la [herencia prototípica](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance) de JavaScript. El tipo de ambos objetos es en realidad _Object_, ya que JavaScript esencialmente solo define los tipos [Boolean, Null, Undefined, Number, String, Symbol, BigInt y Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures).
+Cuando se trata de sintaxis, las clases y los objetos creados a partir de ellos recuerdan mucho a las clases y objetos de Java. Su comportamiento también es bastante similar al de los objetos Java. En el núcleo, siguen siendo objetos basados ​​en la [herencia prototípica](https://developer.mozilla.org/es/docs/Learn/JavaScript/Objects/Inheritance) de JavaScript. El tipo de ambos objetos es en realidad _Object_, ya que JavaScript esencialmente solo define los tipos [Boolean, Null, Undefined, Number, String, Symbol, BigInt y Object](https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures).
 
 La introducción de la sintaxis de clases fue una adición controvertida. Consulte [No es impresionante: clases de ES6](https://github.com/petsel/not-awesome-es6-classes) o [¿Es la "clase" en ES6 la nueva parte "mala"?](Https://medium.com/@rajaraodv/is-class-in-es6-the-new-bad-part-6c4e6fe1ee65) para obtener más detalles.
 
-La sintaxis de la clase ES6 se usa mucho en React "antiguo" y también en Node.js, por lo que comprenderlo es beneficioso incluso en este curso. Sin embargo, dado que estamos usando la nueva función [Hooks](https://reactjs.org/docs/hooks-intro.html) de React a lo largo de este curso, no tenemos un uso concreto para la sintaxis de clases de JavaScripts.
+La sintaxis de la clase ES6 se usa mucho en React "antiguo" y también en Node.js, por lo que comprenderlo es beneficioso incluso en este curso. Sin embargo, dado que estamos usando la nueva función [Hooks](https://es.reactjs.org/docs/hooks-intro.html) de React a lo largo de este curso, no tenemos un uso concreto para la sintaxis de clases de JavaScripts.
 
-### Materiales JavaScript
+## Materiales JavaScript
 
-Existen guías buenas y malas para JavaScript en Internet. La mayoría de los enlaces de esta página relacionados con la referencia de características de JavaScript provienen de la [Guía de JavaScript de Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
+Existen guías buenas y malas para JavaScript en Internet. La mayoría de los enlaces de esta página relacionados con la referencia de características de JavaScript provienen de la [Guía de JavaScript de Mozilla](hhttps://developer.mozilla.org/es/docs/Web/JavaScript).
 
-Se recomienda leer inmediatamente [Una reintroducción a JavaScript (tutorial de JS)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript) en el sitio web de Mozilla.
+Se recomienda leer inmediatamente [Una reintroducción a JavaScript (tutorial de JS)](https://developer.mozilla.org/es/docs/Web/JavaScript/Una_re-introducci%C3%B3n_a_JavaScript) en el sitio web de Mozilla.
 
 Si desea conocer JavaScript en profundidad, hay una gran serie de libros gratuitos en Internet llamada [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS).
 
@@ -547,4 +539,14 @@ Otro gran recurso para aprender JavaScript es [javascript.info](https://javascri
 
 [egghead.io](https://egghead.io) tiene muchos screencasts de calidad sobre JavaScript, React y otros temas interesantes. Desafortunadamente, parte del material está detrás de un muro de pago.
 
+---
+
+<div align="center">
+
+[Proponer cambios en el material](https://github.com/sebastiantorres86/Fullstack-Spanish/edit/main/src/content/1/es/part1b.md)
+
+</div>
+
+<div align="right">
+  <a href="../../1/es/part1c.md">Parte 1b<br>Siguiente parte</a>
 </div>
