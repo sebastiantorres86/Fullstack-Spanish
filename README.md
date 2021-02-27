@@ -23,5 +23,5 @@ Los socios y afiliados del curso incluyen [HoustonInc](https://www.houston-inc.c
 - [Parte 8: GraphQL](src/content/8/es/part8.md)
 - [Parte 9: TypeScript](src/content/9/es/part9.md)
 - [Parte 10: React Native](src/content/10/es/part10.md)
-- [Parte 11: CI/CD](src/content/11/es/part11.md)
+- [Parte 11: CI/CD](src/content/11/en/part11.md)
 
