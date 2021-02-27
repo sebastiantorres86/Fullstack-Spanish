@@ -548,5 +548,5 @@ Otro gran recurso para aprender JavaScript es [javascript.info](https://javascri
 </div>
 
 <div align="right">
-  <a href="../../1/es/part1c.md">Parte 1b<br>Siguiente parte</a>
+  <a href="../../1/es/part1c.md">Parte 1c<br>Siguiente parte</a>
 </div>
