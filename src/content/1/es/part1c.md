@@ -8,7 +8,7 @@
 
 &#9656; [Funciones auxiliares del componente](#funciones-auxiliares-del-componente)
 
-&#9656; [Desestructuración](#Desestructuración)
+&#9656; [Desestructuración](#Desestructuracion)
 
 &#9656; [Re-renderizado de la página](#Re-renderizado-de-la-página)
 
@@ -28,7 +28,7 @@
 
 &#9656; [d Un estado más complejo, depurando aplicaciones React](./part1d.md)
 
-# Ⓒ Estado del componente, controladores de eventos
+# ⓒ Estado del componente, controladores de eventos
 
 Volvamos a trabajar con React.
 
@@ -89,7 +89,7 @@ La edad de la persona no tiene que pasarse como parámetro a la función, ya que
 
 Si examinamos nuestro código actual de cerca, notaremos que la función auxiliar está realmente definida dentro de otra función que define el comportamiento de nuestro componente. En la programación Java, definir una función dentro de otra es complejo y engorroso, por lo que no es tan común. En JavaScript, sin embargo, definir funciones dentro de funciones es una técnica de uso común.
 
-## Desestructuración
+## Desestructuracion
 
 Antes de seguir adelante, veremos una característica pequeña pero útil del lenguaje JavaScript que se agregó en la especificación ES6, que nos permite [desestructurar](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Destructuring_assignment) valores de objetos y matrices en la asignación.
 

@@ -16,7 +16,7 @@
 
 &#9656; [Antiguo React](#Antiguo-React)
 
-&#9656; [Depuración de aplicaciones React](#Depuración-de-aplicaciones-React)
+&#9656; [Depuración de aplicaciones React](#Depuracion-de-aplicaciones-React)
 
 &#9656; [Reglas de los Hooks](#Reglas-de-los-Hooks)
 
@@ -34,7 +34,7 @@
 
 </details>
 
-# Ⓓ Estado del componente, controladores de eventos
+# ⓓ Estado del componente, controladores de eventos
 
 ## Estado complejo
 
@@ -393,7 +393,7 @@ En este curso hemos tomado la decisión un poco radical de utilizar hooks exclus
 
 Aprenderemos más sobre los componentes de clase de React más adelante en el curso.
 
-## Depuración de aplicaciones React
+## Depuracion de aplicaciones React
 
 Una gran parte del tiempo de un desarrollador típico se dedica a depurar y leer el código existente. De vez en cuando podemos escribir una línea o dos de código nuevo, pero una gran parte de nuestro tiempo se dedica a tratar de averiguar por qué algo está roto o cómo funciona algo. Las buenas prácticas y herramientas para depurar son extremadamente importantes por este motivo.
 

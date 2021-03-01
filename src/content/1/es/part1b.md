@@ -26,7 +26,7 @@
 
 &#9656; [d Un estado más complejo, depurando aplicaciones React](./part1d.md)
 
-# Ⓑ JavaScript
+# ⓑ JavaScript
 
 Durante el curso, tenemos un objetivo y la necesidad de aprender una cantidad suficiente de JavaScript además del desarrollo web.
 

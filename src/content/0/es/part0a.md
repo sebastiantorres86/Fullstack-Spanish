@@ -32,7 +32,7 @@
 </details>
 
 &#9656; [b Fundamentos de las aplicaciones web](./part0b.md)
-# Ⓐ Información general
+# ⓐ Información general
 
 Este curso es una introducción al desarrollo web moderno con JavaScript. El enfoque principal está en las aplicaciones de una sola página implementadas con React y soportadas con servicios web RESTful y GraphQL implementados con Node.js. Las novedades del curso de este año son las partes de TypeScript y React Native.
 

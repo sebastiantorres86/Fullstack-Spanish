@@ -20,7 +20,7 @@
 
 &#9656; [d Un estado más complejo, depurando aplicaciones React](./part1d.md)
 
-# Ⓐ Introducción a React
+# ⓐ Introducción a React
 
 Ahora comenzaremos a familiarizarnos con probablemente el tema más importante de este curso, es decir, la librería [React](https://es.reactjs.org/). Comencemos con la creación de una aplicación React simple y con el conocimiento de los conceptos básicos de React.
 

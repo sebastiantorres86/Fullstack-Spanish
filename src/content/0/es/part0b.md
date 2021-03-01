@@ -7,7 +7,7 @@
 
 &#9656; [Aplicaciones web tradicionales](#aplicaciones-web-tradicionales)
 
-&#9656; [Ejecución de la lógica de la aplicación en el navegador](#ejecución-de-la-lógica-de-la-aplicación-en-el-navegador)
+&#9656; [Ejecución de la lógica de la aplicación en el navegador](#Ejecucion-de-la-logica-de-la-aplicacion-en-el-navegador)
 
 &#9656; [Controladores de eventos y funciones callback](#Controladores-de-eventos-y-funciones-callback)
 
@@ -35,7 +35,7 @@
 
 </details>
 
-# Ⓑ Fundamentos de las aplicaciones web
+# ⓑ Fundamentos de las aplicaciones web
 
 Antes de comenzar a programar, repasaremos algunos principios del desarrollo web al examinar una aplicación de ejemplo en <https://studies.cs.helsinki.fi/exampleapp>.
 
@@ -150,7 +150,7 @@ En las aplicaciones web tradicionales, el navegador es "tonto". Solo obtiene dat
 El ejemplo usa [Express](https://expressjs.com/) de Node.js.
 Este curso utilizará Node.js y Express para crear servidores web.
 
-## Ejecución de la lógica de la aplicación en el navegador
+## Ejecucion de la logica de la aplicacion en el navegador
 
 Mantenga abierta la Consola para desarrolladores. Vacíe la consola haciendo clic en el símbolo 🚫.
 Ahora, cuando vaya a la página [notes](https://studies.cs.helsinki.fi/exampleapp/notes), el navegador realiza 4 solicitudes HTTP:
