@@ -96,7 +96,7 @@ Debido a la etiqueta img, el navegador realiza una segunda _solicitud HTTP_ para
 
 ![](../../images/0/6e.png)
 
-La solicitud se realizó a la dirección <https://studies.cs.helsinki.fi/exampleapp/kuva.png> y su tipo es HTTP GET. Las cabeceras de Respuesta nos dicen que el tamaño de la respuesta es 89350 bytes y su [Content-Type](https://developer.mozilla.org/es/docs/Web/HTTP/Headers/Content-Type) es _image/png_, por lo que es una imagen png. El navegador utiliza esta información para mostrar la imagen correctamente en la pantalla.
+La solicitud se realizó a la dirección <https://studies.cs.helsinki.fi/exampleapp/kuva.png> y su tipo es HTTP GET. Las Cabeceras de Respuesta nos dicen que el tamaño de la respuesta es 89350 bytes y su [Content-Type](https://developer.mozilla.org/es/docs/Web/HTTP/Headers/Content-Type) es _image/png_, por lo que es una imagen png. El navegador utiliza esta información para mostrar la imagen correctamente en la pantalla.
 
 La cadena de eventos causada por abrir la página https://studies.cs.helsinki.fi/exampleapp en un navegador forma el siguiente [diagrama de secuencia](https://www.geeksforgeeks.org/unified-modeling-language-uml-sequence-diagrams/):
 
